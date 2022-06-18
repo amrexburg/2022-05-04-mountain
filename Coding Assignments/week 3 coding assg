@@ -1,0 +1,142 @@
+// 1. create an array
+let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+// a. subtract the value of the first element from the last element. Print the result to the console.
+for(i = 0; i < ages.length; i++) {
+
+}
+console.log(ages[ages.length-1] - ages[0])
+
+// b. add a new age to array and repeat step above.
+ages.push(55);
+console.log(ages[ages.length-1] - ages[1])
+
+// c. use loop to iterate through array and calculate average age. Print the result to console.
+const average = ages.reduce((total, amount, index, agesA) => {
+    total += amount;
+    if(index === agesA.length-1) {
+        return total/agesA.length;
+    } else {
+        return total;
+    
+    }
+});
+console.log(average);
+
+
+
+//2. create an array called names
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+
+
+// a. use loop to iterate through array and calculate the average number of letters per name. Print result to console.
+let average1 = 0;
+for( let i = 0; i < names.length; i++) {
+    average1 += names[i].length;
+
+}
+average1 /= names.length;
+console.log(average);
+
+// b. use loop to iterate through array and concatenate all the names together, seperated by spaces and print the result to the console.
+let allNames = names.reduce(function(index, element) {
+   return  index + ' ' + element;
+})
+console.log(allNames);
+
+// 5. create an array called nameLengths, calculate the sum of all elements, print to console.
+let nameLengths = names.map(function(element) {
+    return element.length;
+
+});
+console.log(nameLengths);
+
+// 6. write loop to iterate over the nameLengths array and calculate the sum of all the elements and print to the console.
+let sum1 = nameLengths.reduce(function(accumulator, currentValue) {
+ return accumulator + currentValue;
+
+});
+console.log(sum1);
+
+// 7. write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times.
+
+let result = [];
+const n = 5;
+const stringToRepeat = 'word';
+for (let i = 0; i < n; i++) {
+    result.push(stringToRepeat);
+}
+
+result = result.join('');
+console.log(result);
+  
+
+// 8. write a function that takes two parameters, firstName and lastName, and returns a fullName.
+
+function fullName(firstName, lastName) {
+   console.log(firstName + ' ' + lastName);
+} 
+    fullName('Bob', 'Riley');
+ 
+
+// 9. write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is > than 100.
+const array = [2, 65, 9, 55, 33, 65]; 
+let sumB = 0
+
+for(let i = 0; i < array.length; i++) {
+    sumB += array[i];
+}
+    console.log(sumB);
+    
+if(sumB > 100) {
+    console.log(true);
+}
+
+// 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+const arr = [1, 2, 3, 5, 8, 13, 34, 65];
+var sum = 0;
+for(var number of arr) {
+    sum += number;
+}
+averageC = sum / arr.length;
+console.log(average);
+
+// 11. write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+var fun = [5, 43, 3, 6, 20, 66, 88]; 
+var work = [1, 18, 5, 16, 56];
+
+function avgNum(x) {
+    let sum = 0;
+    for (let i = 0; i < x.length; i++) {
+        sum += x[i];
+    }
+    return sum/x.length;
+}
+console.log(avgNum(fun));
+
+ function compareTo(fun, work) {
+   return avgNum(fun) > avgNum(work); 
+ }
+ console.log(compareTo(fun, work));
+
+
+// 12. write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it isHotOutside and if moneyInPocket is greater than 10.50.
+var isHotOutside = true
+var moneyInPocket = 10.80
+
+function willBuyDrink(isHotOutside, moneyInPocket) {
+    if(isHotOutside && moneyInPocket >= 10.50) {
+    return true; 
+    } 
+} 
+console.log(willBuyDrink(isHotOutside, moneyInPocket));
+
+// 13. create a function of your own that solves a problem.  In comments, write what the function does and why you created it.
+    //Calculates scores for a round of golf.  9 holes shown.  My family likes to golf!  
+var scores = [3, 6, 5, 4, 6, 5, 4, 5, 4];
+
+let total = scores.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+    
+});
+    console.log(total);
+    
